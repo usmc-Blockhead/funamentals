@@ -1,3 +1,5 @@
+# SHALL WE PLAY A GAME!
+
 # characters
 wizard = "Wizard"
 elf = "Elf"
@@ -5,25 +7,23 @@ human = "Human"
 orc = "Orc"
 end = "Exit"
 
-# hit points
-wizard_hp = 70
-elf_hp = 100
-human_hp = 150
-orc_hp = 225
-
+while True:
+    # hit points
+    wizard_hp = 95
+    elf_hp = 100
+    human_hp = 150
+    orc_hp = 225
+    dragon_hp = 300
 
 # damage
-wizard_damage = 120
-elf_damage = 100
-human_damage = 20
-orc_damage = 140
-
-
-# input
-while True:
-    dragon_hp = 300
+    wizard_damage = 130
+    elf_damage = 110
+    human_damage = 40
+    orc_damage = 160
     dragon_damage = 50
+
     while True:
+        # input
         print("1) " + wizard)
         print("2) " + elf)
         print("3) " + human)
@@ -32,6 +32,7 @@ while True:
         choice = input("Choose your character:")
         choice = choice.lower()
 
+# User Choices
         if choice == "1" or choice == "wizard":
             choice = "wizard"
             my_hp = wizard_hp
@@ -58,12 +59,14 @@ while True:
         else:
             print("Unknown Character")
 
+# Chosen Stats
     print("You have chosen", choice)
     print("Damage:", my_damage)
     print("Health:", my_hp)
     print(" ")
 
     while True:
+        # The Battle
         dragon_hp = dragon_hp - my_damage
         print("The", choice, "damaged the Dragon!")
         print("The Dragon's hit-points are now:", dragon_hp)
@@ -80,6 +83,7 @@ while True:
             print("The ", choice, "has lost the battle")
             break
 
+# Do you want to play again?
     play_again = input("Play again? (y/n): ")
     if play_again.lower() == "n":
         break
