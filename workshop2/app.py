@@ -13,7 +13,7 @@ def atm_menu(name):
     print("------------------------------------------")
 
 
-print("          === Automated Teller Machine ===          ")
+print("      ===== Automated Teller Machine =====          ")
 
 while True:
     name = input("Enter Username to register: ")
